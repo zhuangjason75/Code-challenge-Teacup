@@ -3,4 +3,5 @@ public interface Appliance {
     void turnOff();
     boolean isOn();
     String getName();
+    String getStatus();
 }

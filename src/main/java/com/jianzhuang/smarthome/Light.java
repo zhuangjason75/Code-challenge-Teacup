@@ -20,4 +20,9 @@ public class Light implements Appliance {
     public String getName() {
         return "Light";
     }
+
+    @Override
+    public String getStatus() {
+        return getName() + " is " + (isSwitchOn ? "ON" : "OFF");
+    }
 }

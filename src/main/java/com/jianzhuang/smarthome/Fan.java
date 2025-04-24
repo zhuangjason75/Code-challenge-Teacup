@@ -25,5 +25,29 @@ public class Fan implements Appliance {
         if (speed >= 0 && speed <= 2) {
             this.speed = speed;
         }
+        else {
+            throw new IllegalArgumentException("Speed can only be within 0 and 2");
+        }
+    }
+
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void increaseSpeed() {
+        if (speed < 2) {
+            speed++;
+        }
+    }
+
+    public void decreaseSpeed() {
+        if (speed > 0) {
+            speed--;
+        }
+    }
+
+    @Override
+    public String getStatus() {
+        return getName() + " is " + (isOn() ? "ON" : "OFF") + ", speed: " + speed;
     }
 }
